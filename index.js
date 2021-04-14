@@ -1,18 +1,17 @@
-const express = require("express");
+import express from "express";
 // const jwt = require('jsonwebtoken');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const app = express();
 const router = express.Router();
-var cors = require('cors')
-router.use(bodyParser.urlencoded({ extended: false }));
-router.use(bodyParser.json());
+// var cors = require('cors')
+// router.use(bodyParser.urlencoded({ extended: false }));
+// router.use(bodyParser.json());
 
-CognitoExpress = require("cognito-express");
+import CognitoExpress from "cognito-express";
 // var AmazonCognitoIdentity = require('amazon-cognito-identity-js');
 // const poolData = {UserPoolId: 'us-west-2_AKp5J1oGI', ClientId: '7gj1fb7ji190h1i6tf4jp38k51'}
 // const userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
-authenticatedRoute = express.Router();
-app.use(cors())
+// authenticatedRoute = express.Router();
 
 //Initializing CognitoExpress constructor
 const cognitoExpress = new CognitoExpress({
